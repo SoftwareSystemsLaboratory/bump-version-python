@@ -4,11 +4,11 @@ File to handle command line arguements
 
 from argparse import Namespace, ArgumentParser, HelpFormatter
 from operator import attrgetter
-
+from version_utility.utils.self import readVersion
 
 name: str = "SSL Version Utility"
 authors: list = ["Nicholas M. Synovic"]
-
+versionString: list = f"{name}: {readVersion()}"
 class SortingHelpFormatter(HelpFormatter):
     """
     SortingHelpFormatter _summary_
@@ -41,5 +41,13 @@ def mainArgs()  ->  Namespace:
     :rtype: Namespace
     """
     parser: ArgumentParser = ArgumentParser(prog="SSL Version Utility", usage="Utility tool to handle versions of Software and Systems Laboratory (SSL) projects", description="This utility is meant to be used as a development dependency to version bump a project, or to retrieve the version number for a SSL project.", epilog=f"Author(s): {', '.join(authors)}", formatter_class=SortingHelpFormatter)
+
+    parser.add_argument(
+        "-v",
+        "--version",
+        help="Print version of the tool",
+        action="version",
+        version=versionString,
+    )
 
     return parser.parse_args()
