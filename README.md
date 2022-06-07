@@ -20,6 +20,8 @@ projects for managing versions in different build systems.
 We are releasing this software on GitHub alone as other solutions exist for
 this problem.
 
+You can find the latest release for this tool [here](https://github.com/SoftwareSystemsLaboratory/version-utility/releases/latest).
+
 ## Command Line Options
 
 ```shell
