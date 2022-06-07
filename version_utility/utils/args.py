@@ -2,8 +2,9 @@
 File to handle command line arguements
 """
 
-from argparse import Namespace, ArgumentParser, HelpFormatter
+from argparse import ArgumentParser, HelpFormatter, Namespace
 from operator import attrgetter
+
 from version_utility.utils.self import readVersion
 
 name: str = "SSL Version Utility"
@@ -61,18 +62,17 @@ def mainArgs() -> Namespace:
     parser.add_argument(
         "-r",
         "--read-version",
-        default=False,
-        type=bool,
+        action="store_true",
         required=False,
         help="Flag to read version value from file: DEFAULT: False",
     )
     parser.add_argument(
         "-s",
         "--set-version",
-        default="0.0.1",
+        default=None,
         type=str,
         required=False,
-        help="Set version of project to a value. DEFAULT: 0.0.1",
+        help="Set version of project to a value. DEFAULT: None",
     )
     parser.add_argument(
         "-f",

@@ -1,8 +1,12 @@
+[build-system]
+requires = [ "poetry-core>=1.0.0",]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "version_utility"
-version = "0.1.0"
+version = "0.0.1"
 description = "Utility tool to bump versions of Python projects"
-authors = ["Software and Systems Laboratory - Loyola University Chicago <ssl-metrics@ssl.cs.luc.edu>"]
+authors = [ "Software and Systems Laboratory - Loyola University Chicago <ssl-metrics@ssl.cs.luc.edu>",]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -20,7 +24,3 @@ autoflake = "^1.4"
 
 [tool.poetry.scripts]
 ssl-version-utility = "version_utility.main:main"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
