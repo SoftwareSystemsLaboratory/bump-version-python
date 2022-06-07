@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bump-version-python"
+version = "0.1.0"
+description = "Utility tool to bump versions of Python projects"
+authors = ["Software and Systems Laboratory - Loyola University Chicago <ssl-metrics@ssl.cs.luc.edu>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pylint = "^2.13.9"
+flake8 = "^4.0.1"
+mypy = "^0.950"
+bandit = "^1.7.4"
+black = "^22.3.0"
+isort = "^5.10.1"
+autoflake = "^1.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
