@@ -8,7 +8,7 @@ from operator import attrgetter
 from version_utility.utils.self import readVersion
 
 name: str = "SSL Version Utility"
-authors: list = ["Nicholas M. Synovic"]
+authors: list = ["Software and Systems Laboratory - Loyola University Chicago"]
 versionString: list = f"{name}: {readVersion()}"
 
 
