@@ -37,4 +37,5 @@ options:
                         Set version of project to a value. DEFAULT: None
   -v, --version         Print version of the tool
 
-Author(s): Software and Systems Laboratory - Loyola University Chicago```
+Author(s): Software and Systems Laboratory - Loyola University Chicago
+```
