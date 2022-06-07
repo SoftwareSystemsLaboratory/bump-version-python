@@ -5,7 +5,8 @@ import toml
 
 from version_utility.utils.args import mainArgs
 
-def readFile (file: str = "pyproject.toml")   ->  dict:
+
+def readFile(file: str = "pyproject.toml") -> dict:
     path: Path = Path(file)
     extension: str = path.suffix
 
@@ -16,10 +17,12 @@ def readFile (file: str = "pyproject.toml")   ->  dict:
                 return data
         versionFile.close()
 
-def readVersion(data: dict)   ->  str:
+
+def readVersion(data: dict) -> str:
     return data["tool"]["poetry"]["version"]
 
-def setVersion(version: str, file: str = "pyproject.toml")   ->  str:
+
+def setVersion(version: str, file: str = "pyproject.toml") -> str:
     path: Path = Path(file)
     extension: str = path.suffix
     data: dict = readFile(file=file)
@@ -31,6 +34,7 @@ def setVersion(version: str, file: str = "pyproject.toml")   ->  str:
                 data: dict = toml.dump(data, versionFile)
         versionFile.close()
 
+
 def main() -> None:
     args: Namespace = mainArgs()
 
@@ -38,10 +42,11 @@ def main() -> None:
         print(readVersion(file=args.file))
 
     elif args.set_version:
-        setVersion(version = args.set_version, file=args.file)
+        setVersion(version=args.set_version, file=args.file)
 
     else:
         print("Invalid command line arguements")
+
 
 if __name__ == "__main__":
     main()
