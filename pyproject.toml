@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "version-utility"
+name = "version_utility"
 version = "0.1.0"
 description = "Utility tool to bump versions of Python projects"
 authors = ["Software and Systems Laboratory - Loyola University Chicago <ssl-metrics@ssl.cs.luc.edu>"]
